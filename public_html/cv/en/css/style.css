@@ -1,0 +1,23 @@
+
+.big-icon {
+  color: coral;
+  font-size: 30rem;
+}
+
+#download {
+  text-align: center;
+}
+
+
+.wrapper {
+  padding-top: 1.7rem;
+}
+
+.content  {
+    width: 100%;
+    margin: 0 auto;
+}
+
+a:hover {
+  text-decoration: none;
+}

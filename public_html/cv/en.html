@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anders Weijnitz CV</title>
+    <meta name="description" content="Anders Weijnitz CV download page">
+    <meta name="author" content="Anders Weijnitz">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+
+        <div id="download">
+          <a href="Anders_Weijnitz_CV_en.pdf" id="cvlink"><i class="icon-download big-icon"></i></a>
+        </div> 
+
+      </div>
+      <!-- / content -->
+    </div>
+    <!-- / wrapper -->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41888955-2', 'andersw.info');
+      ga('send', 'pageview');
+
+    </script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      $("#cvlink").click(function() {
+        var url = "http://andersw.info/email"; // Default API ENDPOINT
+        mailData = {
+            from: "CV DOWNLOAD",
+            subject: "CV DOWNLOADED",
+            msg: "CV DOWNLOADED"
+        };
+
+        $.post(url, mailData, function (data) {
+            console.log("OK");
+        }, "json")
+
+        return true;
+      });
+    </script>
+  </body>
+</html>
