@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Anders Weijnitz</title>
-    <meta name="description" content="Anders Weijnitz, Engineeer, Maker, Hacker and Hobbyist">
+    <meta name="description" content="Anders Weijnitz, Engineeer, Maker, Hacker and Hobyist">
     <meta name="author" content="Anders Weijnitz">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -73,7 +73,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span12">
-                <h2>Personal Homepage</h2>
+                <h2>My Personal Homepage</h2>
             </div>
         </div>
 
@@ -98,10 +98,10 @@
 
         <div class="row-fluid desc">
             <div class="span8">
-                <p>I usually keep a couple of side projects going. Some are <a style="color:#000000;text-decoration:underline;" href="http://www.flickr.com/photos/aweijnitz/sets/72157624408118962/" target="_top">pretty basic</a>, other more elaborate. Can't say I
-                    finish all, or even half of them and in the end that is probably a good thing. As a father, your main project in life is pretty clear anyway. For hobbies, it's
-                    not the goal, it's the road that takes you there which is the reward. <br/><br/>These are
-                    a couple of examples that I find myself returning to off and on lately.</p>
+                <p>I usually keep a couple of side projects going. Can't say I
+                    finish all, or even half of them and in the end that is probably a good thing. As a father, your main project in life is pretty clear and anyway, it's
+                    not the goal, it's the road that takes you there which makes it fun. <br/><br/>These are
+                    a couple of themes that I find myself returning to off and on lately.</p>
             </div>
             <!-- /span8 -->
         </div>
@@ -123,7 +123,7 @@
                         <ul>
                             <li>Round Robin Datastore</li>
                             <li>Low I/O, fixed size store</li>
-                            <li>Intended for use on the Pi</li>
+                            <li>Optimized for use on the Pi</li>
                             <li><a href="https://github.com/aweijnitz/RounderDB.js" target="_newWindow">RounderDB.js on
                                 Github</a></li>
                         </ul>
@@ -219,10 +219,11 @@
             <div class="span4">
                 <img src="img/me_working.jpg" alt="Project 03">
                 <div class="frosted-bg">
-                    <h6 class="hidden-phone">I work with software for the web</h6>
+                    <h6 class="hidden-phone">I work with web software</h6>
 
-                    <p>Using technology to make life easier for people and businesses. Web CMS is my expertise, but I would count anyting that goes on online. 
-		     </p>
+                    <p>I spend my working life making software for the web. Currently I do that as the
+                        product manager for <a href="http://www.atex.com/products/web-cms" target="newWindow">
+                            the best WCMS out there.</a></p>
                 </div>
             </div>
             <!-- /span4 -->
@@ -437,7 +438,6 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-41888955-2', 'andersw.info');
-  ga('require', 'displayfeatures');
   ga('send', 'pageview');
 
 </script>
