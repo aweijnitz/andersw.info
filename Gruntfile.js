@@ -6,8 +6,11 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          // makes all src relative to cwd
-          { expand: true, cwd: 'src/public_html/', src: ['**', '!**/*.js', '!**/*.css'], dest: 'dist/public_html'}
+          {
+            expand: true,
+            cwd: 'src/public_html/',
+            src: ['**', '!**/*.js', '!**/*.css', '!**/*.hmtl'],
+            dest: 'dist/public_html'}
         ],
       },
     },
@@ -17,7 +20,6 @@ module.exports = function(grunt) {
           except: ['$','jQuery']
         }
       },
-
       build: {
         files: [{
           expand: true,
@@ -53,6 +55,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/public_html',
+          src: '**/*.html',
+          dest: 'dist/public_html'
+        }]
+      }
+    },
     clean: ["tmp", "dist/public_html"]
   });
 
@@ -63,8 +79,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['clean','copy', 'cssmin', 'uglify', 'concat']);
+  grunt.registerTask('default', ['clean','copy', 'htmlmin', 'cssmin', 'uglify', 'concat']);
 
 };
