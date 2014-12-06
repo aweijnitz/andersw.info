@@ -425,8 +425,6 @@
 </div>
 <!-- End modal -->
 
-
-
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -436,65 +434,7 @@
   ga('create', 'UA-41888955-2', 'andersw.info');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
-
 </script>
-
-<!-- JAVASCRIPTS -->
 <script type="text/javascript" src="js/code.min.js"></script>
-
-<script type="text/javascript">
-    
-    // POST submitted email to server
-    //
-    var submitMail = function () {
-        var url = "http://andersw.info/email"; // Default API ENDPOINT
-        var from = $('#name').val();
-        var fromEmail = $('#email').val();
-        var subject = "ANDERSW.INFO CONTACT FORM"
-        var msgBody = $('#message').val() + '\n' + '\n'
-                + "FROM: " + from + '\n'
-                + "EMAIL " + fromEmail + '\n'
-                + "PHONE " + $('#phone').val() + '\n'
-                + "WEB " + $('#website').val();
-        mailData = {
-            from: fromEmail,
-            subject: subject,
-            msg: msgBody
-        };
-        console.log("About to SEND " + JSON.stringify(mailData));
-        $.post(url, mailData, function (data) {
-            $("#mailOk").modal('show')
-            console.log("RECEIVED "+data);
-        }, "json")
-        .fail(function() { 
-            $("#mailFail").modal('show'); 
-        });
-        return false;
-    }
-
-    // Fake submit email to server. Dev/Debug purpose.
-    //
-    var submitMailDebug = function () {
-        var data = "Thank you! Email sent.";
-        $("#mailFail").modal('show');
-        console.log("RECEIVED "+data);
-        return false;
-    }
-
-
-    $("#sendButton").click(submitMail);
-
-    $("#buttonOk").click(function() {
-        $("#mailOk").modal('hide')
-    });
-
-    $("#buttonNotOk").click(function() {
-        $("#mailFail").modal('hide')
-    });
-
-
-
-</script>
-
 </body>
 </html>
