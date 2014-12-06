@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       main: {
         files: [
           // makes all src relative to cwd
-          { expand: true, cwd: 'src/public_html/', src: ['**', '!**/*.js'], dest: 'dist/public_html'}
+          { expand: true, cwd: 'src/public_html/', src: ['**', '!**/*.js', '!**/*.css'], dest: 'dist/public_html'}
         ],
       },
     },
@@ -46,6 +46,13 @@ module.exports = function(grunt) {
         },
       },
     },
+    cssmin: {
+      combine: {
+        files: {
+          'dist/public_html/css/all.css': ['src/public_html/css/*.css']
+        }
+      }
+    },
     clean: ["tmp", "dist/public_html"]
   });
 
@@ -55,8 +62,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['clean','copy', 'uglify', 'concat']);
+  grunt.registerTask('default', ['clean','copy', 'cssmin', 'uglify', 'concat']);
 
 };
