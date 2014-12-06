@@ -36,15 +36,27 @@ module.exports = function(grunt) {
         src: ['tmp/js.minified/*js'],
         dest: 'dist/public_html/js/code.min.js'
       }
-    }
+    },
+    watch: {
+      scripts: {
+        files: ['src/public_html/**/*.js', 'src/public_html/**/*.html', 'src/public_html/**/*.css' ],
+        tasks: ['default'],
+        options: {
+          spawn: false,
+        },
+      },
+    },
+    clean: ["tmp", "dist/public_html"]
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task(s).
-  grunt.registerTask('default', ['copy', 'uglify', 'concat']);
+  grunt.registerTask('default', ['clean','copy', 'uglify', 'concat']);
 
 };
