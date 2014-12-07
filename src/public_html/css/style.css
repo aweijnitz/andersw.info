@@ -878,38 +878,42 @@ li a {
 
 @media screen and (max-width: 480px) {
 	 
-	.section{
-		padding: 80px 0;
-	}
-	
-	#welcome {
-	    background-size: 1024px auto;
-	    padding: 60px 0;
-	}
-	
-	#welcome .intro {
-		margin: 50px 0;
-	}
-
-	#welcome .intro h1 {
-		font-size: 50px; font-size: 5rem;
+    #hawk {
+        display: none;
+    }
+    
+    .section{
+	padding: 80px 0;
+    }
+    
+    #welcome {
+	background-size: 1024px auto;
+	padding: 60px 0;
+    }
+    
+    #welcome .intro {
+	margin: 50px 0;
+    }
+    
+    #welcome .intro h1 {
+	font-size: 50px; font-size: 5rem;
 		line-height: 50px;
-	}
-	
-	#welcome .intro h3 {
-		font-size: 22px; font-size: 2.2rem;
-		line-height: 24px;
-		width: 100%;
-	}
-	
-	#welcome .thumb {
-		background: #95a5a6;
-	    display: block;
-	    margin-left: 3%;
-	    max-width: 80%;
-	    padding: 3%;
-	}
-	
+    }
+    
+    #welcome .intro h3 {
+	font-size: 22px; font-size: 2.2rem;
+	line-height: 24px;
+	width: 100%;
+    }
+    
+    #welcome .thumb {
+	background: #95a5a6;
+	display: block;
+	margin-left: 3%;
+	max-width: 80%;
+	padding: 3%;
+    }
+    
 	#about_me .table th, #about_me .table td {
     	font-size: 11px; font-size: 1.1rem;
 	}
