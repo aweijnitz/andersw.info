@@ -8,35 +8,10 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'src/public_html/',
-            src: ['**', '!js/*.js', '!css/*.css', '!**/*.hmtl'],
+            cwd: 'src/public_html',
+            src: ['**', '!assets/css/*.css'],
             dest: 'dist/public_html'}
-        ],
-      },
-    },
-    uglify: {
-      options: {
-        mangle: {
-          except: ['$','jQuery']
-        }
-      },
-      build: {
-        files: [{
-          expand: true,
-          cwd: 'src/public_html/js',
-          src: '**/*.js',
-          dest: 'tmp/js.minified'
-        }]
-      }
-    },
-    concat: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-        separator: ';'
-      },
-      dist: {
-        src: ['tmp/js.minified/*js'],
-        dest: 'dist/public_html/js/code.min.js'
+        ]
       }
     },
     watch: {
@@ -44,14 +19,14 @@ module.exports = function(grunt) {
         files: ['src/public_html/**/*.js', 'src/public_html/**/*.html', 'src/public_html/**/*.css' ],
         tasks: ['default'],
         options: {
-          spawn: false,
+          spawn: false
         },
       },
     },
     cssmin: {
       combine: {
         files: {
-          'dist/public_html/css/all.css': ['src/public_html/css/*.css']
+          'dist/public_html/assets/css/all.css': ['src/public_html/assets/css/**/*.css']
         }
       }
     },
@@ -82,6 +57,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   // Default task(s).
-  grunt.registerTask('default', ['clean','copy', 'htmlmin', 'cssmin', 'uglify', 'concat']);
+  grunt.registerTask('default', ['clean','copy', 'htmlmin', 'cssmin']);
 
 };
