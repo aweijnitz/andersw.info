@@ -478,7 +478,6 @@ a:focus,
 }
 
 #home .header-content.pattern-bg{
-    background:url(../images/pattern-bg.png);
     background-color:rgba(0,0,0,0.5);
 }
 
@@ -1786,8 +1785,33 @@ a:focus,
 
 }
 
-@media (max-width: 479px) {
+/*
+     Fix for vertical on iPhone 6+, Nexus phones
+*/
+@media (max-width: 414px)  and (orientation : portrait) {
+
+    #home h1{
+        margin:0;
+        font-size:43px;
+    }
+
+
     #projects-container .project-item{
         width: 100%;
     }
-}	
+}
+
+/*
+     Fix for vertical on iPhone 4, 5
+*/
+@media (max-width: 320px) and (orientation : portrait) {
+
+    #home h1{
+        margin:0;
+        font-size:33px;
+    }
+
+    #projects-container .project-item{
+        width: 100%;
+    }
+}

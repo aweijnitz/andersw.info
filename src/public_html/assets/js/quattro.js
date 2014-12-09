@@ -26,7 +26,7 @@ $(document).ready(function() {
 	/*============================================
 	Header
 	==============================================*/
-	
+	/*
 	$('.header-slider').flexslider({
 		animation: "fade",
 		directionNav: false,
@@ -42,6 +42,8 @@ $(document).ready(function() {
 	$(window).load(function(){
 		$('.header-slider').flexslider('play');
 	});
+
+	*/
 	/*============================================
 	ScrollTo Links
 	==============================================*/
@@ -226,7 +228,7 @@ $(document).ready(function() {
 	/*============================================
 	Testimonials Slider
 	==============================================*/
-	
+	/*
 		$('#testimonials-slider').flexslider({
 			prevText: '<i class="fa fa-angle-left"></i>',
 			nextText: '<i class="fa fa-angle-right"></i>',
@@ -239,7 +241,8 @@ $(document).ready(function() {
 			pauseOnHover: true,
 			smoothHeight: false
 		});
-		
+		*/
+
 	/*============================================
 	Tooltips
 	==============================================*/
