@@ -1,2 +1,2 @@
-grunt clean
+npx grunt clean
 

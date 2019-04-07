@@ -1,1 +1,1 @@
-grunt
+npx grunt

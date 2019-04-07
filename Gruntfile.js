@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         files: ['src/public_html/**/*.js', 'src/public_html/**/*.html', 'src/public_html/**/*.css' ],
         tasks: ['default'],
         options: {
-          spawn: false
+          spawn: true
         },
       },
     },

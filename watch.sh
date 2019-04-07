@@ -1,1 +1,1 @@
-grunt watch
+npx grunt watch
